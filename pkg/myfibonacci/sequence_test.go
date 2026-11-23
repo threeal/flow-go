@@ -1,15 +1,18 @@
-package myfibonacci
+package myfibonacci_test
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/threeal/go-starter/pkg/myfibonacci"
 )
 
 func TestFibonacciSequence(t *testing.T) {
-	assert.Equal(t, FibonacciSequence(-1), []int{})
-	assert.Equal(t, FibonacciSequence(0), []int{})
-	assert.Equal(t, FibonacciSequence(1), []int{1})
-	assert.Equal(t, FibonacciSequence(2), []int{1, 1})
-	assert.Equal(t, FibonacciSequence(5), []int{1, 1, 2, 3, 5})
+	t.Parallel()
+
+	assert.Equal(t, []int{}, myfibonacci.FibonacciSequence(-1))
+	assert.Equal(t, []int{}, myfibonacci.FibonacciSequence(0))
+	assert.Equal(t, []int{1}, myfibonacci.FibonacciSequence(1))
+	assert.Equal(t, []int{1, 1}, myfibonacci.FibonacciSequence(2))
+	assert.Equal(t, []int{1, 1, 2, 3, 5}, myfibonacci.FibonacciSequence(5))
 }

@@ -17,6 +17,11 @@ jobs:
         with:
           go-version-file: go.mod
 
+      - name: Setup golangci-lint
+        uses: golangci/golangci-lint-action@v9.3.0
+        with:
+          install-only: true
+
       - name: Install dprint
         uses: taiki-e/install-action@v2
         with:
