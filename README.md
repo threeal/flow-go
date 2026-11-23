@@ -4,7 +4,7 @@ A minimalistic [GitHub repository template](https://docs.github.com/en/repositor
 
 ## Setup
 
-Install [Go](https://go.dev/), [Lefthook](https://lefthook.dev/), and [dprint](https://dprint.dev/), then register the pre-commit hook:
+Install [Go](https://go.dev/), [Lefthook](https://lefthook.dev/), [dprint](https://dprint.dev/), and [golangci-lint](https://golangci-lint.run/welcome/install/), then register the pre-commit hook:
 
 ```sh
 lefthook install

@@ -6,6 +6,9 @@ pre-commit:
     - name: tidy dependencies
       run: go mod tidy
 
+    - name: fix lint
+      run: golangci-lint run --fix
+
     - name: fix go formatting
       run: go fmt ./...
 
