@@ -34,12 +34,10 @@ jobs:
         run: lefthook run pre-commit --all-files
 
       - name: Test
-        run: go test -v ./... -coverprofile=.cover.out -covermode=atomic -coverpkg=./...
+        run: go test -v ./... -coverprofile=.cover.out -covermode=atomic
 
       - name: Check coverage
         uses: vladopajic/go-test-coverage@v2.23.0
         with:
+          config: .testcoverage.yaml
           profile: .cover.out
-          threshold-file: 100
-          threshold-package: 100
-          threshold-total: 100
